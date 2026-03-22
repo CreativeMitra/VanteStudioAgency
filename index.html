@@ -3,451 +3,548 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Vanté Studio | High-Performance Digital Infrastructure</title>
+<title>Vanté Studio | High-Performance Digital Systems</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "error-dim": "#d53d18",
-                "secondary": "#e5e2e1",
-                "on-tertiary-fixed": "#505050",
-                "surface-container-low": "#131313",
-                "primary": "#8eff71",
-                "on-secondary-fixed": "#403f3f",
-                "outline-variant": "#484848",
-                "secondary-fixed": "#e5e2e1",
-                "on-primary-fixed": "#064200",
-                "primary-dim": "#2be800",
-                "outline": "#757575",
-                "tertiary-fixed-dim": "#f3f0f0",
-                "inverse-surface": "#f9f9f9",
-                "on-secondary-container": "#d2d0cf",
-                "background": "#0e0e0e",
-                "secondary-container": "#474746",
-                "surface-bright": "#2c2c2c",
-                "surface": "#0e0e0e",
-                "on-error": "#450900",
-                "on-secondary-fixed-variant": "#5c5b5b",
-                "on-primary-container": "#0b5800",
-                "surface-container-lowest": "#000000",
-                "inverse-on-surface": "#555555",
-                "surface-tint": "#8eff71",
-                "inverse-primary": "#106f00",
-                "primary-container": "#2ff801",
-                "tertiary": "#fbf9f8",
-                "on-tertiary-fixed-variant": "#6e6d6d",
-                "surface-container-highest": "#262626",
-                "on-surface-variant": "#ababab",
-                "on-background": "#ffffff",
-                "surface-dim": "#0e0e0e",
-                "on-tertiary": "#5f5f5f",
-                "on-tertiary-container": "#575756",
-                "surface-container-high": "#1f1f1f",
-                "on-primary-fixed-variant": "#0d6200",
-                "tertiary-dim": "#edeaea",
-                "on-surface": "#ffffff",
-                "secondary-dim": "#d6d4d3",
-                "surface-variant": "#262626",
-                "primary-fixed-dim": "#2be800",
-                "on-secondary": "#525151",
-                "error": "#ff7351",
-                "on-primary": "#0d6100",
-                "tertiary-container": "#edeaea",
-                "error-container": "#b92902",
-                "primary-fixed": "#2ff801",
-                "tertiary-fixed": "#ffffff",
-                "surface-container": "#191919",
-                "secondary-fixed-dim": "#d6d4d3",
-                "on-error-container": "#ffd2c8"
-              },
-              fontFamily: {
-                "headline": ["Inter"],
-                "body": ["Inter"],
-                "label": ["Space Grotesk"]
-              },
-              borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#4c0082",
+              "primary-fixed": "#f3e8ff",
+              "on-primary-fixed-variant": "#6b21a8",
+              "secondary-container": "#454747",
+              "tertiary-container": "#ef6719",
+              "on-tertiary-fixed": "#351000",
+              "error-container": "#93000a",
+              "surface-container-lowest": "#0e0e0e",
+              "tertiary": "#ffb595",
+              "primary-fixed-dim": "#a855f7",
+              "on-tertiary-fixed-variant": "#7c2e00",
+              "outline": "#8b90a0",
+              "surface": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-fixed": "#1a1c1c",
+              "surface-dim": "#131313",
+              "on-secondary": "#2f3131",
+              "on-background": "#e5e2e1",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-highest": "#353534",
+              "tertiary-fixed-dim": "#ffb595",
+              "on-surface": "#e5e2e1",
+              "inverse-surface": "#e5e2e1",
+              "outline-variant": "#414755",
+              "on-tertiary": "#571e00",
+              "surface-tint": "#a855f7",
+              "on-surface-variant": "#c1c6d7",
+              "background": "#131313",
+              "inverse-on-surface": "#313030",
+              "primary": "#a855f7",
+              "secondary-fixed-dim": "#c6c6c7",
+              "surface-bright": "#393939",
+              "error": "#ffb4ab",
+              "secondary": "#c6c6c7",
+              "surface-container": "#201f1f",
+              "secondary-fixed": "#e2e2e2",
+              "on-secondary-container": "#b4b5b5",
+              "on-primary": "#ffffff",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#454747",
+              "tertiary-fixed": "#ffdbcc",
+              "on-error": "#690005",
+              "surface-variant": "#353534",
+              "on-primary-fixed": "#2e004f",
+              "on-primary-container": "#2e004f",
+              "on-tertiary-container": "#4c1a00",
+              "primary-container": "#9333ea",
+              "success": "#4ade80"
             },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
           },
-        }
+        },
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .status-rail {
-            position: relative;
-        }
-        .status-rail::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background-color: #8eff71;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #000000;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1f1f1f;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #8eff71;
-        }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(32, 31, 31, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .text-gradient-primary {
+        background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .pipeline-line {
+        background: linear-gradient(90deg, #a855f7 0%, transparent 100%);
+        height: 2px;
+      }
+      input, select, textarea {
+        background: #1c1b1b !important;
+        border: 1px solid #414755 !important;
+      }
+      input:focus, select:focus, textarea:focus {
+        border-color: #a855f7 !important;
+        outline: none;
+        box-shadow: 0 0 0 1px #a855f7 !important;
+      }
+      .glow-border {
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+      }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
-<!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/70 backdrop-blur-md flex justify-between items-center px-12 py-6 border-none">
-<div class="text-2xl font-black tracking-[-0.02em] text-white uppercase font-headline">
-            Vanté Studio
-        </div>
-<div class="hidden md:flex gap-12">
-<a class="text-white/60 hover:text-white transition-colors font-headline font-bold tracking-tighter uppercase" href="#process">Process</a>
-<a class="text-white/60 hover:text-white transition-colors font-headline font-bold tracking-tighter uppercase" href="#services">Services</a>
-<a class="text-white/60 hover:text-white transition-colors font-headline font-bold tracking-tighter uppercase" href="#results">Results</a>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/60 backdrop-blur-md shadow-2xl shadow-black/40">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-[#e5e2e1] font-headline">Vanté Studio</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#c1c6d7] font-['Manrope'] font-medium tracking-tight hover:text-primary transition-colors duration-200" href="#">Services</a>
+<a class="text-[#c1c6d7] font-['Manrope'] font-medium tracking-tight hover:text-primary transition-colors duration-200" href="#">Work</a>
+<a class="text-[#c1c6d7] font-['Manrope'] font-medium tracking-tight hover:text-primary transition-colors duration-200" href="#">Process</a>
 </div>
-<a class="bg-primary text-on-primary px-6 py-3 font-headline font-bold tracking-tighter uppercase hover:bg-primary-dim active:scale-95 transition-all duration-200" href="#apply">
-            Apply to Work With Us
-        </a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-headline font-bold text-sm tracking-tight active:scale-95 transition-transform">Apply Now</button>
+</div>
 </nav>
-<main>
 <!-- Hero Section -->
-<section class="min-h-screen flex flex-col justify-center px-12 pt-32 pb-20 relative overflow-hidden bg-surface-container-lowest">
-<div class="absolute inset-0 opacity-10 pointer-events-none">
-<div class="absolute top-0 left-0 w-full h-full" data-alt="Technical blueprint grid pattern background" style="background-image: linear-gradient(#484848 1px, transparent 1px), linear-gradient(90deg, #484848 1px, transparent 1px); background-size: 80px 80px;"></div>
-</div>
-<div class="relative z-10 max-w-6xl">
-<span class="font-label text-primary tracking-[0.4em] uppercase mb-8 block">EST. 2024 / SYSTEM ARCHITECTURE</span>
-<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-12 uppercase italic">
-                    We Build Systems That Scale Businesses — <span class="text-primary">Not Just Pretty Designs</span>
+<header class="relative pt-48 pb-32 px-6 flex flex-col items-center text-center overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,_rgba(168,85,247,0.08)_0%,_transparent_50%)]"></div>
+<div class="max-w-4xl">
+<span class="inline-block py-1 px-3 mb-6 bg-surface-container text-primary text-[0.6875rem] uppercase tracking-widest font-label border border-outline-variant/20 rounded">Engineered for Performance</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] mb-8">
+                We build systems that help your <span class="text-gradient-primary">business grow.</span>
 </h1>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
-<p class="md:col-span-7 text-xl md:text-2xl text-on-surface-variant font-medium leading-relaxed">
-                        If your brand isn’t converting, it’s leaking money. We fix that with precision-built digital infrastructure.
-                    </p>
-<div class="md:col-span-5 flex flex-col gap-6">
-<a class="w-full bg-primary text-on-primary text-center py-6 text-xl font-bold uppercase tracking-widest hover:bg-primary-dim transition-all active:scale-[0.98]" href="#apply">
-                            Apply to Work With Us
-                        </a>
-<div class="flex items-center gap-4 text-primary font-label uppercase text-sm">
-<span class="material-symbols-outlined">bolt</span>
-                            System audit included for qualified applicants
-                        </div>
+<div class="mb-10 space-y-2">
+<p class="text-on-surface text-xl md:text-2xl font-bold leading-tight">If your website or marketing isn’t converting, you’re losing customers.</p>
+<p class="text-on-surface-variant text-lg md:text-xl font-light">We fix the foundation. You reap the rewards.</p>
 </div>
+<div class="flex flex-col items-center gap-6">
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-headline font-bold text-base tracking-tight hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all">Apply to Work With Us</button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-md font-headline font-bold text-base tracking-tight hover:bg-surface-bright transition-colors">Explore Our Work</button>
 </div>
-</div>
-</section>
-<!-- Big Idea -->
-<section class="py-32 px-12 bg-surface">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-16 border-t border-outline-variant/20 pt-16">
-<div class="md:col-span-4">
-<h2 class="font-label text-primary uppercase tracking-widest text-sm mb-4">The Philosophy</h2>
-<h3 class="text-4xl font-black uppercase tracking-tighter italic">Broken Systems = Broken Growth</h3>
-</div>
-<div class="md:col-span-8">
-<p class="text-3xl font-medium leading-snug">
-                        Most businesses struggle not because of lack of effort—but because of broken systems. We step in, rebuild your digital foundation, and turn it into a predictable growth engine.
+<div class="flex flex-col items-center gap-2">
+<p class="text-[0.6875rem] uppercase tracking-[0.2em] font-label text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-success rounded-full animate-pulse"></span>
+                        Helping 25+ brands turn traffic into scalable revenue
                     </p>
 </div>
 </div>
-</section>
-<!-- Problem Agitation & Authority -->
-<section class="py-32 px-12 bg-surface-container-low">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-32">
-<div class="status-rail pl-12">
-<h3 class="font-label text-error uppercase tracking-widest mb-8">The Leak</h3>
-<div class="space-y-12">
-<div class="group">
-<span class="text-outline text-4xl font-black mb-4 block group-hover:text-error transition-colors">01</span>
-<p class="text-2xl font-bold uppercase">Your website looks fine—but doesn’t convert.</p>
 </div>
-<div class="group">
-<span class="text-outline text-4xl font-black mb-4 block group-hover:text-error transition-colors">02</span>
-<p class="text-2xl font-bold uppercase">Your content is consistent—but not growing.</p>
-</div>
-<div class="group">
-<span class="text-outline text-4xl font-black mb-4 block group-hover:text-error transition-colors">03</span>
-<p class="text-2xl font-bold uppercase">Your systems exist—but don’t scale.</p>
-</div>
-</div>
-<p class="mt-16 text-xl font-bold text-error uppercase italic">That’s not a marketing problem. That’s a systems problem.</p>
-</div>
-<div class="bg-surface-container-high p-16 flex flex-col justify-between">
-<div>
-<h3 class="font-label text-primary uppercase tracking-widest mb-8">The Authority</h3>
-<p class="text-4xl font-black uppercase tracking-tighter leading-none mb-12">
-                            We work with brands that are done experimenting.
-                        </p>
-</div>
-<div class="space-y-6">
-<div class="flex justify-between items-center border-b border-outline-variant/40 pb-4">
-<span class="font-label uppercase">Build</span>
-<span class="material-symbols-outlined text-primary">trending_up</span>
-</div>
-<div class="flex justify-between items-center border-b border-outline-variant/40 pb-4">
-<span class="font-label uppercase">Optimize</span>
-<span class="material-symbols-outlined text-primary">settings_suggest</span>
-</div>
-<div class="flex justify-between items-center border-b border-outline-variant/40 pb-4">
-<span class="font-label uppercase">Scale</span>
-<span class="material-symbols-outlined text-primary">rocket_launch</span>
-</div>
-<p class="font-label text-sm text-on-surface-variant uppercase mt-12 tracking-tighter">No fluff. No delays. No excuses.</p>
-</div>
-</div>
+</header>
+<!-- Problem Highlight -->
+<section class="bg-black py-24 md:py-32 px-6 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto text-center">
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-widest uppercase text-error-container leading-tight">
+                If your site isn’t converting, it’s <span class="text-error underline decoration-4 underline-offset-[12px]">broken.</span>
+</h2>
 </div>
 </section>
-<!-- Services (Bento Grid) -->
-<section class="py-32 px-12 bg-surface" id="services">
-<div class="mb-20">
-<h2 class="text-6xl font-black uppercase tracking-tighter italic mb-4">Infrastructure <span class="text-primary">Modules</span></h2>
-<p class="font-label text-on-surface-variant tracking-widest uppercase">Premium services framed for high-performance scale</p>
+<!-- Systems vs Effort Visual Comparison -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline text-4xl font-extrabold tracking-tighter">Systems vs Effort.</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Effort is manual, exhausting, and unreliable. Systems are automated, scalable, and predictable.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
-<!-- Service 1 -->
-<div class="bg-surface-container p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">terminal</span>
+<div class="grid md:grid-cols-2 gap-8 relative">
+<!-- Effort (Red Side) -->
+<div class="bg-surface p-10 rounded-xl border border-error/30 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-error">trending_down</span>
+</div>
+<!-- Visual Flow Hint: Chaos -->
+<div class="absolute -left-10 bottom-0 opacity-20 pointer-events-none">
+<svg class="w-64 h-64 text-error" fill="currentColor" viewbox="0 0 200 200">
+<path d="M20,100 Q40,40 80,80 T140,20 T180,140 T40,180 Z" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-headline text-xl font-bold mb-6 text-error flex items-center gap-2">
+<span class="material-symbols-outlined">warning</span> The Chaos of Effort
+                    </h3>
+<div class="space-y-6 relative z-10">
+<div class="flex items-start gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-error mt-1">scatter_plot</span>
 <div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">Website Development + Maintenance</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">Continuous engineering</p>
+<p class="font-bold text-on-surface">Fragmented marketing</p>
+<p class="text-sm">Random tactics with no clear customer journey.</p>
 </div>
 </div>
-<!-- Service 2 -->
-<div class="bg-surface-container-high p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">layers</span>
+<div class="flex items-start gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-error mt-1">running_with_errors</span>
 <div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">Web App Development</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">Custom architecture</p>
+<p class="font-bold text-on-surface">No clear journey</p>
+<p class="text-sm">Users get lost in a sea of confusing navigation and messaging.</p>
 </div>
 </div>
-<!-- Service 3 -->
-<div class="bg-surface-container p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">smart_toy</span>
+<div class="flex items-start gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-error mt-1">priority_high</span>
 <div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">Chatbot Development</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">Automated conversion</p>
+<p class="font-bold text-on-surface">Manual lead follow-up</p>
+<p class="text-sm">Processes that drain your team and miss critical opportunities.</p>
 </div>
 </div>
-<!-- Service 4 -->
-<div class="bg-surface-container-high p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">web_asset</span>
+<div class="pt-6 border-t border-error/10">
+<p class="text-error font-bold text-lg">Outcome: Burnout &amp; Stagnation</p>
+</div>
+</div>
+</div>
+<!-- Systems (Green Side) -->
+<div class="bg-surface p-10 rounded-xl border border-success/30 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl text-success">account_tree</span>
+</div>
+<!-- Visual Flow Hint: Clean Flow -->
+<div class="absolute -right-10 bottom-0 opacity-20 pointer-events-none">
+<svg class="w-64 h-64 text-success" fill="currentColor" viewbox="0 0 200 200">
+<path d="M20,150 L60,110 L100,130 L140,90 L180,110" fill="none" stroke="currentColor" stroke-width="4"></path>
+<circle cx="20" cy="150" r="4"></circle>
+<circle cx="60" cy="110" r="4"></circle>
+<circle cx="100" cy="130" r="4"></circle>
+<circle cx="140" cy="90" r="4"></circle>
+<circle cx="180" cy="110" r="4"></circle>
+</svg>
+</div>
+<h3 class="font-headline text-xl font-bold mb-6 text-success flex items-center gap-2">
+<span class="material-symbols-outlined">verified</span> The Vanté System
+                    </h3>
+<div class="space-y-6 relative z-10">
+<div class="flex items-start gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-success mt-1">hub</span>
 <div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">UI/UX Design</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">User psychology systems</p>
+<p class="font-bold text-on-surface">Unified architecture</p>
+<p class="text-sm">A seamless bridge between brand design and sales logic.</p>
 </div>
 </div>
-<!-- Service 5 -->
-<div class="bg-surface-container-high p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">campaign</span>
+<div class="flex items-start gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-success mt-1">settings_suggest</span>
 <div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">Social Media Management</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">Attention systems</p>
+<p class="font-bold text-on-surface">Automated pipelines</p>
+<p class="text-sm">High-performance systems that work for you 24/7/365.</p>
 </div>
 </div>
-<!-- Service 6 -->
-<div class="bg-surface-container p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">video_stable</span>
+<div class="flex items-start gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-success mt-1">trending_up</span>
 <div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">Bulk Video Editing</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">High-volume production</p>
+<p class="font-bold text-on-surface">Predictable growth</p>
+<p class="text-sm">Data-backed decisions that drive compounding revenue.</p>
 </div>
 </div>
-<!-- Service 7 -->
-<div class="bg-surface-container-high p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">palette</span>
-<div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">Graphic Design Package</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">Visual identity frameworks</p>
+<div class="pt-6 border-t border-success/10">
+<p class="text-success font-bold text-lg">Outcome: Scalable Revenue</p>
 </div>
 </div>
-<!-- Service 8 -->
-<div class="bg-surface-container p-8 h-80 flex flex-col justify-between group hover:bg-primary transition-all duration-300">
-<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl">3d_rotation</span>
-<div>
-<h4 class="text-xl font-black uppercase group-hover:text-on-primary">Product Visuals Upgrade</h4>
-<p class="text-sm font-label uppercase text-on-surface-variant mt-2 group-hover:text-on-primary/80">Industrial fidelity</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Solution Philosophy -->
-<section class="py-32 px-12 bg-surface-container-lowest">
-<div class="max-w-4xl mx-auto text-center">
-<h3 class="font-label text-primary uppercase tracking-[0.3em] mb-12">Solution Philosophy</h3>
-<p class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight italic">
-                    "Everything we build is part of a larger system—where design, technology, and content work together to drive growth."
-                </p>
+<!-- Solution Diagram -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-3xl font-bold mb-2">The Unified Growth Protocol</h2>
+<p class="text-on-surface-variant text-sm max-w-2xl mx-auto">A unified system combining conversion-driven strategy, high-performance tech, and content architecture.</p>
 </div>
-</section>
-<!-- Process Section -->
-<section class="py-32 px-12 bg-surface" id="process">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-<div class="p-16 border border-outline-variant/20 flex flex-col items-center text-center">
-<span class="font-label text-outline text-6xl mb-8">01</span>
-<h4 class="text-3xl font-black uppercase mb-6">Diagnose</h4>
-<p class="text-on-surface-variant font-medium">Identifying the structural leaks in your current digital footprint.</p>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 relative">
+<div class="absolute hidden md:block w-full h-[2px] bg-outline-variant/20 top-1/2 -translate-y-1/2 z-0"></div>
+<div class="relative z-10 bg-surface-container p-8 rounded-full w-48 h-48 flex flex-col items-center justify-center border border-primary/30 text-center shadow-xl">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">draw</span>
+<span class="font-headline font-bold text-sm">Design</span>
+<span class="text-[10px] text-on-surface-variant">Frictionless UX</span>
 </div>
-<div class="p-16 bg-surface-container-low flex flex-col items-center text-center relative overflow-hidden">
-<div class="absolute inset-0 bg-primary opacity-5"></div>
-<span class="font-label text-primary text-6xl mb-8">02</span>
-<h4 class="text-3xl font-black uppercase mb-6">Build</h4>
-<p class="text-on-surface-variant font-medium">Engineering custom infrastructure to capture and convert attention.</p>
+<div class="relative z-10 bg-surface-container p-8 rounded-full w-48 h-48 flex flex-col items-center justify-center border border-primary/30 text-center shadow-xl">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">code</span>
+<span class="font-headline font-bold text-sm">Technology</span>
+<span class="text-[10px] text-on-surface-variant">Scalable Stack</span>
 </div>
-<div class="p-16 border border-outline-variant/20 flex flex-col items-center text-center">
-<span class="font-label text-outline text-6xl mb-8">03</span>
-<h4 class="text-3xl font-black uppercase mb-6">Scale</h4>
-<p class="text-on-surface-variant font-medium">Optimizing the machine for long-term, predictable growth.</p>
+<div class="relative z-10 bg-surface-container p-8 rounded-full w-48 h-48 flex flex-col items-center justify-center border border-primary/30 text-center shadow-xl">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">article</span>
+<span class="font-headline font-bold text-sm">Content</span>
+<span class="text-[10px] text-on-surface-variant">Conversion Driven</span>
 </div>
-</div>
-</section>
-<!-- Proof / Results -->
-<section class="py-32 px-12 bg-surface-container-low" id="results">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-16">
-<div class="md:col-span-5">
-<h2 class="text-6xl font-black uppercase tracking-tighter leading-none italic mb-8">Growth isn’t luck—it’s <span class="text-primary">engineered.</span></h2>
-<p class="font-label text-on-surface-variant uppercase tracking-widest">Statistical evidence of performance</p>
-</div>
-<div class="md:col-span-7 grid grid-cols-2 gap-12">
-<div class="status-rail pl-6">
-<span class="text-4xl font-black uppercase block mb-2">+42%</span>
-<p class="font-label text-xs uppercase text-on-surface-variant">Avg Conversion Rate Increase</p>
-</div>
-<div class="status-rail pl-6">
-<span class="text-4xl font-black uppercase block mb-2">3.5X</span>
-<p class="font-label text-xs uppercase text-on-surface-variant">Higher Retention Rates</p>
-</div>
-<div class="status-rail pl-6">
-<span class="text-4xl font-black uppercase block mb-2">ULTRA</span>
-<p class="font-label text-xs uppercase text-on-surface-variant">Stronger Brand Positioning</p>
-</div>
-<div class="status-rail pl-6">
-<span class="text-4xl font-black uppercase block mb-2">SOLO</span>
-<p class="font-label text-xs uppercase text-on-surface-variant">Scalable Digital Infrastructure</p>
+<div class="relative z-10 bg-primary p-8 rounded-full w-56 h-56 flex flex-col items-center justify-center text-center shadow-[0_0_40px_rgba(168,85,247,0.4)]">
+<span class="material-symbols-outlined text-on-primary text-4xl mb-2">rocket_launch</span>
+<span class="font-headline font-black text-on-primary text-xl">GROWTH</span>
+<span class="text-[10px] text-on-primary/80">Result Optimized</span>
 </div>
 </div>
 </div>
 </section>
-<!-- Ideal Client & Competitive Edge -->
-<section class="py-32 px-12 bg-surface">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-1">
-<div class="bg-surface-container-high p-16">
-<h3 class="font-label text-primary uppercase tracking-widest mb-12">Ideal Client Profile</h3>
-<p class="text-2xl font-bold uppercase mb-8">We’re not for everyone.</p>
-<ul class="space-y-6">
-<li class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="font-label uppercase text-sm">Founders serious about scaling</span>
-</li>
-<li class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="font-label uppercase text-sm">Businesses generating revenue</span>
-</li>
-<li class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary">check_circle</span>
-<span class="font-label uppercase text-sm">Teams ready for long-term investment</span>
-</li>
+<!-- Filter Section -->
+<section class="py-24 px-6 text-center bg-surface-container-lowest">
+<div class="max-w-5xl mx-auto">
+<h2 class="font-headline text-primary text-sm uppercase tracking-[0.3em] font-bold mb-4">The selective filter</h2>
+<h3 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 italic">Read This Before Applying.</h3>
+<p class="text-on-surface-variant mb-4 max-w-xl mx-auto">We are a specialized studio, not a commodity shop.</p>
+<p class="text-primary text-xs uppercase tracking-widest font-bold mb-16">Apply only if you meet these criteria</p>
+<div class="grid md:grid-cols-2 gap-4 rounded-2xl overflow-hidden">
+<div class="bg-[#1a2e1a] p-12 text-left border border-success/20 rounded-2xl shadow-2xl">
+<h3 class="font-headline text-2xl font-black mb-8 text-success flex items-center gap-3">
+<span class="material-symbols-outlined">check_circle</span> Who we work with
+                    </h3>
+<ul class="space-y-6 text-on-surface-variant font-medium">
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-success text-xl">done</span> <span>Established revenue-making businesses ($1M+ ARR)</span></li>
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-success text-xl">done</span> <span>Owners ready to invest $10k+ in growth infrastructure</span></li>
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-success text-xl">done</span> <span>Teams that value long-term systems over "growth hacks"</span></li>
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-success text-xl">done</span> <span>Decision-makers seeking a technical partner, not a task-taker</span></li>
 </ul>
 </div>
-<div class="bg-surface-container p-16">
-<h3 class="font-label text-primary uppercase tracking-widest mb-12">The Competitive Edge</h3>
-<div class="grid grid-cols-2 gap-8">
-<div>
-<h5 class="font-black uppercase text-sm mb-2">Strategic Thinking</h5>
-<p class="text-xs text-on-surface-variant font-label">Architecture first.</p>
+<div class="bg-[#2e1a1a] p-12 text-left border border-error/20 rounded-2xl shadow-2xl">
+<h3 class="font-headline text-2xl font-black mb-8 text-error flex items-center gap-3">
+<span class="material-symbols-outlined">cancel</span> Who we are NOT for
+                    </h3>
+<ul class="space-y-6 text-on-surface-variant font-medium">
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-error text-xl">close</span> <span>Startups with no product-market fit or validated revenue</span></li>
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-error text-xl">close</span> <span>Those seeking the cheapest quote rather than the best system</span></li>
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-error text-xl">close</span> <span>Micromanagers who don't trust technical expertise</span></li>
+<li class="flex items-start gap-4"><span class="material-symbols-outlined text-error text-xl">close</span> <span>Businesses that need "it done yesterday" at the cost of quality</span></li>
+</ul>
 </div>
-<div>
-<h5 class="font-black uppercase text-sm mb-2">Systems Over One-offs</h5>
-<p class="text-xs text-on-surface-variant font-label">Longevity by design.</p>
 </div>
-<div>
-<h5 class="font-black uppercase text-sm mb-2">Long-term Growth</h5>
-<p class="text-xs text-on-surface-variant font-label">Built to evolve.</p>
 </div>
+</section>
+<!-- Services Section -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<p class="text-primary uppercase tracking-widest text-[0.6875rem] font-bold mb-4">The Building Blocks of Success</p>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter">Systems We Build</h2>
+</div>
+<!-- Core Architectures -->
+<div class="mb-16">
+<div class="flex items-center gap-4 mb-8">
+<h3 class="font-headline text-xl font-bold">Core System Architectures</h3>
+<div class="h-px flex-grow bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-high p-10 rounded-xl border border-primary/30 relative group hover:border-primary transition-all shadow-xl">
+<div class="absolute -top-3 -right-3 bg-primary text-on-primary text-[0.6rem] font-black uppercase px-3 py-1.5 rounded-sm shadow-lg tracking-widest z-10">Primary System</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">layers</span>
+<h4 class="font-headline font-bold text-2xl mb-3">Web App Dev</h4>
+<p class="text-sm text-on-surface-variant mb-6">Scalable digital products engineered with modern frameworks for extreme performance and deep integration.</p>
+<p class="text-sm font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-xs">trending_up</span> + Conversions by up to 3x</p>
+</div>
+<div class="bg-surface-container-high p-10 rounded-xl border border-primary/30 relative group hover:border-primary transition-all shadow-xl">
+<div class="absolute -top-3 -right-3 bg-primary text-on-primary text-[0.6rem] font-black uppercase px-3 py-1.5 rounded-sm shadow-lg tracking-widest z-10">Primary System</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">draw</span>
+<h4 class="font-headline font-bold text-2xl mb-3">UI/UX Design</h4>
+<p class="text-sm text-on-surface-variant mb-6">Technical design systems that remove every ounce of friction from the user journey and reinforce brand authority.</p>
+<p class="text-sm font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-xs">trending_up</span> + Retention by up to 40%</p>
+</div>
+<div class="bg-surface-container-high p-10 rounded-xl border border-primary/30 relative group hover:border-primary transition-all shadow-xl">
+<div class="absolute -top-3 -right-3 bg-primary text-on-primary text-[0.6rem] font-black uppercase px-3 py-1.5 rounded-sm shadow-lg tracking-widest z-10">Primary System</div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">terminal</span>
+<h4 class="font-headline font-bold text-2xl mb-3">Website Dev</h4>
+<p class="text-sm text-on-surface-variant mb-6">High-performance custom sites built for speed, conversion, and seamless backend scalability.</p>
+<p class="text-sm font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-xs">verified</span> + Brand Trust by 80%+</p>
+</div>
+</div>
+</div>
+<!-- Specialized Support -->
 <div>
-<h5 class="font-black uppercase text-sm mb-2">Premium Quality</h5>
-<p class="text-xs text-on-surface-variant font-label">Precision execution.</p>
+<div class="flex items-center gap-4 mb-8">
+<h3 class="font-headline text-xl font-bold">Specialized Support Services</h3>
+<div class="h-px flex-grow bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<div class="bg-surface-container p-6 rounded-xl hover:bg-surface-bright transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">smart_toy</span>
+<h3 class="font-headline font-bold text-sm mb-1">Chatbot Dev</h3>
+<p class="text-[10px] text-on-surface-variant">AI-driven interaction systems.</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl hover:bg-surface-bright transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">public</span>
+<h3 class="font-headline font-bold text-sm mb-1">Social Media</h3>
+<p class="text-[10px] text-on-surface-variant">Strategic content architecture.</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl hover:bg-surface-bright transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">movie</span>
+<h3 class="font-headline font-bold text-sm mb-1">Video Editing</h3>
+<p class="text-[10px] text-on-surface-variant">Editorial-grade brand stories.</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl hover:bg-surface-bright transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">pentagon</span>
+<h3 class="font-headline font-bold text-sm mb-1">Graphic Design</h3>
+<p class="text-[10px] text-on-surface-variant">Technical visual assets.</p>
+</div>
+<div class="bg-surface-container p-6 rounded-xl hover:bg-surface-bright transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">view_in_ar</span>
+<h3 class="font-headline font-bold text-sm mb-1">Product Visuals</h3>
+<p class="text-[10px] text-on-surface-variant">Ultra-clean 3D renderings.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Investment Framing & Urgency -->
-<section class="py-32 px-12 bg-surface-container-lowest border-y border-outline-variant/10">
-<div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-20">
-<div class="flex-1">
-<h3 class="font-label text-primary uppercase tracking-widest mb-8">The Investment</h3>
-<h4 class="text-5xl font-black uppercase italic mb-8">This isn’t an expense—it’s <span class="text-primary">infrastructure.</span></h4>
-<p class="text-xl font-medium text-on-surface-variant mb-12">
-                        $10K+ investment for a system that pays for itself. We only work with companies where we can generate at least 5X ROI.
-                    </p>
-<div class="flex items-center gap-4 p-6 bg-error/10 border-l-4 border-error">
-<span class="material-symbols-outlined text-error">warning</span>
-<p class="font-label text-sm uppercase text-error">Limited number of clients to maintain quality. Apply now.</p>
+<!-- Process -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-4">Growth is built.</h2>
+<p class="text-on-surface-variant">The 3-stage protocol for transformation.</p>
+</div>
+<div class="relative space-y-20">
+<!-- Pipeline Connection Visual -->
+<div class="absolute left-8 top-8 bottom-8 w-[2px] border-l-2 border-dashed border-primary/30 hidden md:block"></div>
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left relative">
+<div class="flex-shrink-0 w-16 h-16 bg-surface-container flex items-center justify-center rounded-xl font-headline text-2xl font-black text-primary border border-primary/40 shadow-[0_0_15px_rgba(168,85,247,0.2)] z-10">01</div>
+<div class="pt-2">
+<h3 class="font-headline text-2xl font-bold mb-3 flex items-center gap-2 justify-center md:justify-start">Diagnose <span class="material-symbols-outlined text-primary">arrow_right_alt</span></h3>
+<p class="text-on-surface-variant leading-relaxed">We audit your current tech stack, design, and funnel to find the leaks. No guessing, just data-driven identification of bottlenecks.</p>
 </div>
 </div>
-<div class="flex-1 w-full" id="apply">
-<div class="bg-surface-container-high p-12">
-<form action="#" class="space-y-8">
-<div>
-<label class="block font-label text-xs uppercase text-on-surface-variant mb-2">Full Name</label>
-<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-colors font-headline" placeholder="JOHN DOE" type="text"/>
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left relative">
+<div class="flex-shrink-0 w-16 h-16 bg-surface-container flex items-center justify-center rounded-xl font-headline text-2xl font-black text-primary border border-primary/40 shadow-[0_0_15px_rgba(168,85,247,0.2)] z-10">02</div>
+<div class="pt-2">
+<h3 class="font-headline text-2xl font-bold mb-3 flex items-center gap-2 justify-center md:justify-start">Build <span class="material-symbols-outlined text-primary">arrow_right_alt</span></h3>
+<p class="text-on-surface-variant leading-relaxed">We architect the solution. Our engineers and designers execute on a high-converting foundation that is fast, reliable, and scalable.</p>
 </div>
-<div>
-<label class="block font-label text-xs uppercase text-on-surface-variant mb-2">Business Email</label>
-<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-colors font-headline" placeholder="JD@COMPANY.COM" type="email"/>
 </div>
-<div>
-<label class="block font-label text-xs uppercase text-on-surface-variant mb-2">Current Revenue / Goal</label>
-<input class="w-full bg-transparent border-b border-outline-variant py-3 focus:outline-none focus:border-primary transition-colors font-headline" placeholder="TELL US WHERE YOU ARE" type="text"/>
+<div class="flex flex-col md:flex-row gap-8 items-center md:items-start text-center md:text-left relative">
+<div class="flex-shrink-0 w-16 h-16 bg-surface-container flex items-center justify-center rounded-xl font-headline text-2xl font-black text-primary border border-primary/40 shadow-[0_0_15px_rgba(168,85,247,0.2)] z-10">03</div>
+<div class="pt-2">
+<h3 class="font-headline text-2xl font-bold mb-3">Scale</h3>
+<p class="text-on-surface-variant leading-relaxed">Once the foundation is solid, we push the boundaries. Iterative improvements and strategic scaling to maximize your return on investment.</p>
 </div>
-<button class="w-full bg-primary text-on-primary py-6 font-black uppercase tracking-widest hover:bg-primary-dim transition-all active:scale-95" type="submit">
-                                Submit Application
-                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Investment Comparison & Scarcity -->
+<section class="py-24 px-6 bg-surface-container-low overflow-hidden relative">
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<div class="mb-12 p-8 rounded-2xl bg-surface/30 border border-primary/20 glow-border">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter mb-4">An investment, not an expense.</h2>
+<p class="text-primary font-bold italic">A broken system costs you customers every day. A Vanté system pays for itself.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+<div class="p-6 rounded-xl border border-error/10 bg-surface/40">
+<p class="text-xs uppercase tracking-widest text-error-container font-bold mb-2">The cost of a bad system</p>
+<p class="text-on-surface-variant text-sm italic">Lost leads, high churn, broken tech, and a "leaky bucket" business that wastes every marketing dollar.</p>
+</div>
+<div class="p-6 rounded-xl border border-success/10 bg-surface/40">
+<p class="text-xs uppercase tracking-widest text-success font-bold mb-2">The high-performance system</p>
+<p class="text-on-surface-variant text-sm italic">Predictable ROI, automated scaling, and a digital asset that compounds in value over time.</p>
+</div>
+</div>
+<div class="glass-card p-12 rounded-2xl border border-outline-variant/10 shadow-2xl mb-24">
+<p class="text-lg md:text-xl text-on-surface-variant mb-12 italic leading-relaxed">
+                    "We limit ourselves to only <span class="text-primary font-bold">2 new clients per month</span>. This ensures the level of precision and quality that our partners expect and deserve."
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center">
+<div class="font-headline text-3xl font-black text-primary mb-1">100%</div>
+<div class="text-[0.6875rem] uppercase tracking-widest text-on-surface-variant font-label">Focused Execution</div>
+</div>
+<div class="text-center">
+<div class="font-headline text-3xl font-black text-primary mb-1">Quality</div>
+<div class="text-[0.6875rem] uppercase tracking-widest text-on-surface-variant font-label">Long-Term Growth</div>
+</div>
+<div class="text-center">
+<div class="font-headline text-3xl font-black text-primary mb-1">Strict</div>
+<div class="text-[0.6875rem] uppercase tracking-widest text-on-surface-variant font-label">Selection Criteria</div>
+</div>
+</div>
+</div>
+<div class="py-12 border-t border-outline-variant/10">
+<h3 class="font-headline text-4xl md:text-6xl font-black tracking-tighter text-on-surface mb-2">
+                    We’ll still be building—
+                </h3>
+<h3 class="font-headline text-4xl md:text-6xl font-black tracking-tighter text-primary">
+                    just not with you.
+                </h3>
+<p class="mt-4 text-primary text-xs font-bold uppercase tracking-widest italic">Limited availability: We only accept 2 new system builds per month.</p>
+<p class="mt-8 text-on-surface-variant uppercase tracking-[0.4em] text-xs font-bold">Don't settle for less than precision.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA & Contact Form -->
+<section class="py-32 px-6">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tighter mb-4">You need a better system.</h2>
+<p class="text-on-surface-variant text-lg mb-8">Stop fighting the tools and start leveraging them. Let's talk.</p>
+<div class="inline-block px-4 py-2 bg-error/10 border border-error/20 rounded-md animate-pulse">
+<p class="text-error text-xs font-bold uppercase tracking-widest">Limited availability: We only accept 2 new system builds per month</p>
+</div>
+</div>
+<div class="bg-surface-container p-8 md:p-12 rounded-xl border border-outline-variant/10">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-[0.6875rem] uppercase tracking-widest font-label text-on-surface-variant">Name</label>
+<input class="rounded-md p-4 text-on-surface font-body" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[0.6875rem] uppercase tracking-widest font-label text-on-surface-variant">Email Address</label>
+<input class="rounded-md p-4 text-on-surface font-body" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[0.6875rem] uppercase tracking-widest font-label text-on-surface-variant">Business Name</label>
+<input class="rounded-md p-4 text-on-surface font-body" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[0.6875rem] uppercase tracking-widest font-label text-on-surface-variant">What is your current monthly revenue?</label>
+<select class="rounded-md p-4 text-on-surface font-body appearance-none">
+<option value=""></option>
+<option value="under-50k">Under $50k</option>
+<option value="50k-100k">$50k - $100k</option>
+<option value="100k-500k">$100k - $500k</option>
+<option value="500k+">$500k+</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[0.6875rem] uppercase tracking-widest font-label text-on-surface-variant">Desired timeline for implementation?</label>
+<select class="rounded-md p-4 text-on-surface font-body appearance-none">
+<option value=""></option>
+<option value="asap">ASAP / Within 2 weeks</option>
+<option value="1-month">Within 1 month</option>
+<option value="3-months">1-3 months</option>
+<option value="flexible">Flexible / Planning stage</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-[0.6875rem] uppercase tracking-widest font-label text-on-surface-variant">Website URL (If applicable)</label>
+<input class="rounded-md p-4 text-on-surface font-body" type="text"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-[0.6875rem] uppercase tracking-widest font-label text-on-surface-variant">What is your biggest business bottleneck right now?</label>
+<textarea class="rounded-md p-4 text-on-surface font-body" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<div class="text-center mb-4">
+<p class="text-primary text-[0.6rem] font-black uppercase tracking-[0.2em]">LIMITED AVAILABILITY: APPLICATIONS CLOSE SOON.</p>
+</div>
+<button class="w-full bg-primary text-on-primary px-8 py-5 rounded-md font-headline font-black text-lg tracking-tight hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] active:scale-95 transition-all flex items-center justify-center gap-2" type="submit">
+                            Submit Application <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-[0.6rem] uppercase tracking-widest text-on-surface-variant mt-4 opacity-60">Qualified applicants will receive a response within 24 hours.</p>
+</div>
 </form>
 </div>
 </div>
-</div>
 </section>
-<!-- Final CTA -->
-<section class="py-32 px-12 bg-primary">
-<div class="max-w-5xl mx-auto text-center">
-<h2 class="text-on-primary text-5xl md:text-7xl font-black uppercase tracking-tighter italic leading-none mb-12">
-                    You don’t need more effort. You need better systems.
-                </h2>
-<div class="flex flex-col md:flex-row justify-center gap-6">
-<a class="bg-on-primary text-primary px-12 py-6 font-black uppercase tracking-widest hover:opacity-90 transition-all" href="#apply">
-                        Apply now
-                    </a>
-<a class="border-2 border-on-primary text-on-primary px-12 py-6 font-black uppercase tracking-widest hover:bg-on-primary hover:text-primary transition-all" href="#apply">
-                        Let’s build something that dominates your market
-                    </a>
-</div>
-</div>
-</section>
-</main>
 <!-- Footer -->
-<footer class="bg-[#000000] flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-none border-t border-[#484848]/15">
-<div class="mb-12 md:mb-0">
-<div class="text-xl font-black text-white uppercase mb-4">Vanté Studio</div>
-<p class="font-label text-xs tracking-widest uppercase text-white/40">© 2024 VANTÉ STUDIO. ALL RIGHTS RESERVED.</p>
+<footer class="bg-[#0e0e0e] w-full py-12 border-t border-[#414755]/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-black text-[#e5e2e1] font-headline uppercase tracking-tighter">Vanté Studio</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-[#c1c6d7] hover:text-primary transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-[#c1c6d7] hover:text-primary transition-colors duration-300" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-[#c1c6d7] hover:text-primary transition-colors duration-300" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-[#c1c6d7] hover:text-primary transition-colors duration-300" href="#">Contact</a>
 </div>
-<div class="flex flex-wrap justify-center gap-12">
-<a class="text-white/40 font-label text-xs tracking-widest uppercase hover:text-[#8eff71] transition-colors" href="#apply">Apply Now</a>
-<a class="text-white/40 font-label text-xs tracking-widest uppercase hover:text-[#8eff71] transition-colors" href="#">Privacy Policy</a>
-<a class="text-white/40 font-label text-xs tracking-widest uppercase hover:text-[#8eff71] transition-colors" href="#">Terms of Service</a>
-<a class="text-white/40 font-label text-xs tracking-widest uppercase hover:text-[#8eff71] transition-colors" href="#">Instagram</a>
+<p class="font-['Inter'] text-[0.6875rem] uppercase tracking-widest text-[#c1c6d7] opacity-60">© 2024 Vanté Studio. Engineered for Precision.</p>
 </div>
 </footer>
-</body>
+</body>d
 </html>
